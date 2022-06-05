@@ -1,9 +1,10 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
-  entry: ['./src/scripts/game.ts', './webpack/credits.js'],
+  entry: ['./src/scripts/game.js', './webpack/credits.js'],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js',
@@ -35,6 +36,15 @@ module.exports = {
         { from: 'pwa', to: '' },
         { from: 'src/favicon.ico', to: '' }
       ]
+    }),
+    new ESLintPlugin({
+      files: ['./src'],
+      extensions: [`ts`, `tsx`, 'js', 'jsx'],
+      exclude: [
+          'node_modules'
+      ],
+      emitError: true,
+      failOnError: true
     })
   ]
 }
