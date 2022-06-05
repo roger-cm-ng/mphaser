@@ -3,7 +3,7 @@
   "version": "3.55.2",
   "description": "Phaser 3 starter template with TypeScript and webpack.",
   "homepage": "https://github.com/yandeu/phaser-project-template#readme",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.dev.js",
     "build": "rimraf dist && webpack --config webpack/webpack.prod.js",
@@ -12,7 +12,8 @@
     "format": "prettier --check src/scripts/**",
     "format:write": "prettier --write src/scripts/**",
     "lint:eslint:src": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "lint:eslint:fix": "npm run lint:eslint:src -- --fix"
+    "lint:eslint:fix": "npm run lint:eslint:src -- --fix",
+    "heroku-postbuild": "if-env NODE_ENV=production && npm run build"
   },
   "keywords": [
     "Phaser",
@@ -52,6 +53,7 @@
     "eslint-plugin-unicorn": "^42.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
+    "if-env": "^1.0.4",
     "javascript-obfuscator": "^4.0.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
