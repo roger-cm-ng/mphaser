@@ -47,7 +47,7 @@ export default class MainScene extends Phaser.Scene {
             });
         });
         this.bridge = new Bridge({ scene: this });
-        globalState.randomise(30);
+        globalState.randomise(33);
         this.batchLevel();
         autorun(() => {
             this.scoreLabel.text = `Score: ${globalState.score}`;
@@ -63,7 +63,7 @@ export default class MainScene extends Phaser.Scene {
                     index: globalState.manEntryCounter
                 });
                 globalState.manEntryCounter++;
-                if (globalState.manEntryCounter % 30 === 0) {
+                if (globalState.manEntryCounter % 33 === 0) {
                     globalState.level++;
                     this.intervals.remove();
                     this.time.delayedCall(1500, () => {

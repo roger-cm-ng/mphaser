@@ -18,7 +18,7 @@ class Bridge extends Phaser.Physics.Arcade.Sprite {
         this.setImmovable(true)
             .setDisplaySize(width, height)
             .setOrigin(0)
-            .setTint('#ff000')
+            .setTint('#ff0000')
             .setInteractive();
 
         autorun(() => {

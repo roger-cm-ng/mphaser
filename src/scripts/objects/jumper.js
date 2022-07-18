@@ -12,7 +12,7 @@ class Jumper extends Phaser.Physics.Arcade.Sprite {
         this.index = index;
 
         this.setOrigin(0.5, 0);
-        this.setTint('#ff000');
+        this.setTint('#ffff00');
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
@@ -28,7 +28,7 @@ class Jumper extends Phaser.Physics.Arcade.Sprite {
 
         autorun(() => {
             if (globalState.gameOver) {
-                this.setTint('#ff000');
+                this.setTint('#ff0000');
             }
         });
     }
