@@ -12,6 +12,7 @@ class Jumper extends Phaser.Physics.Arcade.Sprite {
         this.index = index;
 
         this.setOrigin(0.5, 0);
+        this.setTint('#ff000');
 
         scene.physics.add.existing(this);
         scene.add.existing(this);
