@@ -76,6 +76,7 @@ class Jumper extends Phaser.Physics.Arcade.Sprite {
             this.setVelocityY(this.velY);
         });
         this.scene.physics.add.collider(this, this.scene[`groundBottom${this.floorIndex}`], () => {
+            this.scene.sound.play('game-over');
             this.scene.physics.pause();
             globalState.gameOver = true;
             this.scene.intervals.remove();

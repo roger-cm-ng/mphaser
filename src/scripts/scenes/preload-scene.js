@@ -12,6 +12,7 @@ export default class PreloadScene extends Phaser.Scene {
         });
         this.load.image('ground', 'assets/img/ground.png');
         this.load.audio('bridge-bounce', 'assets/audio/bridge-bounce.mp3');
+        this.load.audio('game-over', 'assets/audio/game-over.mp3');
     }
 
     create () {
