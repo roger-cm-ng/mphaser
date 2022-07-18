@@ -6,7 +6,12 @@ export default class PreloadScene extends Phaser.Scene {
     }
 
     preload () {
-        this.load.image('phaser-logo', 'assets/img/phaser-logo.png');
+        this.load.spritesheet('jumper', 'assets/img/frog-sprite.png', {
+            frameWidth: 21,
+            frameHeight: 43
+        });
+        this.load.image('ground', 'assets/img/ground.png');
+        this.load.audio('bridge-bounce', 'assets/audio/bridge-bounce.mp3');
     }
 
     create () {

@@ -1,11 +1,12 @@
 /* global window */
 import Phaser from 'phaser';
 
+import { globalState } from './objects/global-state';
 import MainScene from './scenes/main-scene';
 import PreloadScene from './scenes/preload-scene';
 
-const DEFAULT_WIDTH = 300;
-const DEFAULT_HEIGHT = 400;
+const DEFAULT_WIDTH = globalState.static.gameWidth;
+const DEFAULT_HEIGHT = globalState.static.gameHeight;
 const config = {
     type: Phaser.AUTO,
     backgroundColor: '#ffffff',
@@ -19,11 +20,9 @@ const config = {
     scene: [PreloadScene, MainScene],
     physics: {
         default: 'arcade',
-        arcade: {
-            debug: false,
-            gravity: { y: 400 }
-        }
-    }
+        arcade: { debug: false }
+    },
+    pixelArt: true
 };
 
 window.addEventListener('load', () => {

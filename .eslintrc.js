@@ -3,5 +3,8 @@ module.exports = {
       './eslint-config/base',
       './eslint-config/import',
       './eslint-config/unicorn'
-  ]
+  ],
+  rules: {
+    'no-undef': 'off'
+  }
 };

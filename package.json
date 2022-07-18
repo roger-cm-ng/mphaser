@@ -43,7 +43,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "phaser": "^3.55.2"
+    "just-range": "^4.0.1",
+    "mobx": "^6.6.0",
+    "phaser": "^3.55.2",
+    "shuffle-array": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
