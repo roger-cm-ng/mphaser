@@ -18,7 +18,7 @@ export default class GameOverScene extends Phaser.Scene {
 
         restartButton.setInteractive();
         restartButton.on('pointerdown', () => {
-            globalState.gameOver = false;
+            this.reset();
             this.scene.start('MainScene');
         });
 
@@ -31,7 +31,7 @@ export default class GameOverScene extends Phaser.Scene {
         homesceneButton.setInteractive();
         homesceneButton.on('pointerdown', () => {
             console.log('pointerdown');
-            globalState.gameOver = false;
+            this.reset();
             this.scene.start('HomeScene');
         });
 
@@ -40,5 +40,12 @@ export default class GameOverScene extends Phaser.Scene {
             fill: '#000000',
             align: 'center'
         }).setOrigin(0.5, 0.5);
+    }
+
+    reset () {
+        globalState.gameOver = false;
+        globalState.score = 0;
+        globalState.level = 0;
+        globalState.manEntryCounter = 0;
     }
 }

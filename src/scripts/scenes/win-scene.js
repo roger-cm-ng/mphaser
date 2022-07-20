@@ -9,7 +9,7 @@ export default class WinScene extends Phaser.Scene {
         this.add.image(150, 100, 'you-win');
 
         this.add.text(150, 150, 'The frogs have been saved!!', {
-            font: '17px Arial',
+            font: '17px Alternate Gothic',
             fill: '#6d9d72',
             align: 'center'
         }).setOrigin(0.5, 0.5);
