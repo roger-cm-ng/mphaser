@@ -14,6 +14,7 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.audio('bridge-bounce', 'assets/audio/bridge-bounce.mp3');
         this.load.audio('game-over', 'assets/audio/game-over.mp3');
         this.load.image('homeSceneBkgd', 'assets/img/home-screen-bkgd.jpg');
+        this.load.image('game-over', 'assets/img/game-over.png');
     }
 
     create () {

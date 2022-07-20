@@ -52,6 +52,11 @@ export default class MainScene extends Phaser.Scene {
         autorun(() => {
             this.scoreLabel.text = `Score: ${globalState.score}`;
         });
+        autorun(() => {
+            if (globalState.gameOver) {
+                this.scene.start('GameOverScene');
+            }
+        });
     }
 
     batchLevel () {

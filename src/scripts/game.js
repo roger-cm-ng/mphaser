@@ -2,6 +2,7 @@
 import Phaser from 'phaser';
 
 import { globalState } from './objects/global-state';
+import GameOverScene from './scenes/game-over-scene';
 import HomeScene from './scenes/home-scene';
 import MainScene from './scenes/main-scene';
 import PreloadScene from './scenes/preload-scene';
@@ -18,7 +19,7 @@ const config = {
         width: DEFAULT_WIDTH,
         height: DEFAULT_HEIGHT
     },
-    scene: [PreloadScene, HomeScene, MainScene],
+    scene: [PreloadScene, HomeScene, MainScene, GameOverScene],
     physics: {
         default: 'arcade',
         arcade: { debug: false }
