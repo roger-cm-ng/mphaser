@@ -13,10 +13,11 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.image('ground', 'assets/img/ground.png');
         this.load.audio('bridge-bounce', 'assets/audio/bridge-bounce.mp3');
         this.load.audio('game-over', 'assets/audio/game-over.mp3');
+        this.load.image('homeSceneBkgd', 'assets/img/home-screen-bkgd.jpg');
     }
 
     create () {
-        this.scene.start('MainScene');
+        this.scene.start('HomeScene');
 
     /**
      * This is how you would dynamically import the mainScene class (with code splitting),
