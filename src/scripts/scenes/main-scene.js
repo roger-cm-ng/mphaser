@@ -57,6 +57,11 @@ export default class MainScene extends Phaser.Scene {
                 this.scene.start('GameOverScene');
             }
         });
+        autorun(() => {
+            if (globalState.score === 99) {
+                this.scene.start('WinScene');
+            }
+        });
     }
 
     batchLevel () {
