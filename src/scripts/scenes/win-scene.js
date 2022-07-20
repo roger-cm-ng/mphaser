@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 
+import { gameReset } from '../objects/utils';
+
 export default class WinScene extends Phaser.Scene {
     constructor () {
         super({ key: 'WinScene' });
@@ -23,6 +25,7 @@ export default class WinScene extends Phaser.Scene {
         homeButton.setInteractive();
         homeButton.on('pointerdown', () => {
             console.log('pointerdown');
+            gameReset();
             this.scene.start('HomeScene');
         });
 
@@ -35,6 +38,7 @@ export default class WinScene extends Phaser.Scene {
         replayButton.setInteractive();
         replayButton.on('pointerdown', () => {
             console.log('pointerdown');
+            gameReset();
             this.scene.start('MainScene');
         });
     }
