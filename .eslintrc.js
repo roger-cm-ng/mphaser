@@ -5,6 +5,7 @@ module.exports = {
       './eslint-config/unicorn'
   ],
   rules: {
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'import/no-named-as-default-member': 'off'
   }
 };
